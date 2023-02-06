@@ -1,4 +1,8 @@
-/**
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+/*
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
@@ -9,13 +13,27 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Weather App`,
+    description: `A simple weather application`,
+    author: `@Mahrs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Teko`,
+            file: `https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap`,
+          },
+        ],
+      },
+    },
     `gatsby-plugin-image`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,6 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        apiKey: process.env.API_KEY,
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,

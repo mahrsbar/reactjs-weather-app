@@ -1,0 +1,77 @@
+.weatherDisplay {
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow:0px 0px 20px 5px #80808033;
+
+  .currentWeather {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    &Title {
+      font-size: 1.5em;
+    }
+
+    &Data {
+      display: flex;
+      height: 150px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    &Details {
+      .currentWeatherTemperature {
+        font-size: 4.5em;
+        font-weight: bold;
+        color: #000000cf;
+        font-family: "Teko";
+        line-height: 50px;
+      }
+
+      .currentWeatherDescription{
+        text-transform: capitalize;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .forecast {
+    &List {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      border-top: 5px solid white;
+      font-size: 1.3em;
+
+      &Item {
+        flex: 1;
+        border-right: 5px solid white;
+        text-align: center;
+        padding: 20px;
+
+        &:last-child {
+          border: 0;
+        }
+
+        &Day {
+          display: block;
+        }
+
+        img {
+          margin-bottom: 0px;
+        }
+
+        &Temp {
+          font-weight: bold;
+          display: block;
+          color: #000000cf;
+          font-family: "Teko";
+          font-size: 1.4em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.cityListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+
+  .cityListItem {
+    border: 0px;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #5b5a5a;
+  
+
+    &.active {
+      color: #3ab2ed;
+      font-weight: bold;
+    }
+  }
+}
