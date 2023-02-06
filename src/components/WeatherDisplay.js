@@ -11,10 +11,10 @@ const WeatherDisplay = ({ selectedCity }) => {
       try {
         const [currentWeatherResponse, forecastResponse] = await Promise.all([
           axios.get(
-            `http://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&mode=json&units=metric&APPID=${process.env.API_KEY}`
+            `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&mode=json&units=metric&APPID=${process.env.API_KEY}`
           ),
           axios.get(
-            `http://api.openweathermap.org/data/2.5/forecast?q=${selectedCity}&mode=json&units=metric&APPID=${process.env.API_KEY}`
+            `https://api.openweathermap.org/data/2.5/forecast?q=${selectedCity}&mode=json&units=metric&APPID=${process.env.API_KEY}`
           ),
         ])
 
