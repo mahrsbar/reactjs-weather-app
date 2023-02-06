@@ -72,7 +72,7 @@ const WeatherDisplay = ({ selectedCity }) => {
             <div className="forecastListItem" key={forecast.dt}>
               <span className="forecastListItemDay">{formatDate(new Date(forecast.dt_txt))}</span>
               <img
-                src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`}
+                src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`}
                 alt={forecast.weather[0].description}
               />
               <span className="forecastListItemTemp">
