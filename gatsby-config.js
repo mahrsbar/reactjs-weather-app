@@ -46,7 +46,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        apiKey: process.env.API_KEY,
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
