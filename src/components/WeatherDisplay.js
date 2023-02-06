@@ -51,7 +51,7 @@ const WeatherDisplay = ({ selectedCity }) => {
         <div className="currentWeatherData">
           <div className="currentWeatherIcon">
           <img
-              src={`http://openweathermap.org/img/wn/${weatherData.currentWeather.weather[0].icon}@4x.png`}
+              src={`https://openweathermap.org/img/wn/${weatherData.currentWeather.weather[0].icon}@4x.png`}
               alt={weatherData.currentWeather.weather[0].description}
             />
           </div>
