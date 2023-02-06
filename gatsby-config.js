@@ -13,7 +13,7 @@ require("dotenv").config({
  */
 module.exports = {
   siteMetadata: {
-    title: `Weather App`,
+    title: `Weather Application`,
     description: `A simple weather application`,
     author: `@Mahrs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
